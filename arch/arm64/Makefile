@@ -77,11 +77,11 @@ zinstall install: vmlinux
 
 dtbs: scripts
 	$(Q)$(MAKE) $(build)=$(boot)/dts dtbs
-ifeq ($(CONFIG_MACH_LGE),y)
-	$(Q)$(MAKE) $(build)=$(boot)/dts/lge dtbs
-else
-	$(Q)$(MAKE) $(build)=$(boot)/dts/qcom dtbs
-endif
+#ifeq ($(CONFIG_MACH_LGE),y)
+#	$(Q)$(MAKE) $(build)=$(boot)/dts/lge dtbs
+#else
+	$(Q)$(MAKE) $(build)=$(boot)/dts/talkman dtbs
+#endif
 
 PHONY += vdso_install
 vdso_install:

@@ -306,21 +306,18 @@
 			"DBG1:%s: " fmt, __func__, arg); \
 	if ((dev) && (dev)->ipc_log)   \
 		ipc_log_string((dev)->ipc_log, "%s: " fmt, __func__, arg); \
-	if (msm_pcie_debug_mask)   \
 		pr_alert("%s: " fmt, __func__, arg);		  \
 	} while (0)
 
 #define PCIE_DBG2(dev, fmt, arg...) do {			 \
 	if ((dev) && (dev)->ipc_log)   \
 		ipc_log_string((dev)->ipc_log, "DBG2:%s: " fmt, __func__, arg);\
-	if (msm_pcie_debug_mask)   \
 		pr_alert("%s: " fmt, __func__, arg);              \
 	} while (0)
 
 #define PCIE_DBG3(dev, fmt, arg...) do {			 \
 	if ((dev) && (dev)->ipc_log)   \
 		ipc_log_string((dev)->ipc_log, "DBG3:%s: " fmt, __func__, arg);\
-	if (msm_pcie_debug_mask)   \
 		pr_alert("%s: " fmt, __func__, arg);              \
 	} while (0)
 
